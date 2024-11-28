@@ -1,0 +1,59 @@
+/* profile-delete.css */
+
+/* Основен стил за body */
+body {
+    font-family: Arial, sans-serif;  /* Шрифт за страницата */
+    background-color: #f0f0f0;       /* Светъл фон */
+    color: #333;                      /* Цвета на текста */
+    margin: 0;                       /* Нулиране на отстъп */
+    padding: 0;                      /* Нулиране на отстъп */
+}
+
+/* Стил на контейнера за изтриване на профили */
+.profile-delete {
+    max-width: 400px;                /* Максимална ширина на контейнера */
+    margin: 100px auto;              /* Центрирано разположение */
+    padding: 20px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border: 1px solid #ccc;          /* Граница на контейнера */
+    border-radius: 5px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Лека сянка на контейнера */
+}
+
+/* Стил на основните входни полета */
+.profile-delete input[type="text"],
+.profile-delete input[type="email"],
+.profile-delete input[type="password"],
+.profile-delete select,
+.profile-delete textarea {
+    width: 100%;                     /* Ширина на входните полета */
+    padding: 12px;                   /* Вътрешни отстъпи */
+    margin-bottom: 15px;             /* Отстъп между входните полета */
+    border: 1px solid #ccc;          /* Граница на входните полета */
+    border-radius: 4px;              /* Закръглени ъгли */
+    box-sizing: border-box;           /* Включване на границите в ширината */
+}
+
+/* Стил на бутона за изпращане */
+button {
+    background-color: #dc3545;       /* Червен фон на бутона */
+    color: #ffffff;                  /* Бял текст на бутона */
+    border: none;                    /* Без граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+    font-size: 16px;                 /* Размер на шрифта на бутона */
+}
+
+/* Потъмняване на бутона при ховър */
+button:hover {
+    background-color: #c82333;       /* Потъмняване при задържане */
+}
+
+/* Стил за съобщения за грешки, ако е необходимо */
+.error-message {
+    color: red;                      /* Червен цвят за съобщения с грешки */
+    margin-top: 10px;               /* Отстъп отгоре */
+    font-size: 0.9em;                /* По-малък размер на шрифта */
+}

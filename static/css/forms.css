@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif; /* Задава шрифта на цялата страница */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Светлосив фон за страницата */
+    align-items: center;
+    width: 100%;
+}
+
+h2 {
+    background-color: #007bff; /* Син фон за заглавието */
+    color: #ffffff; /* Бял текст на заглавието */
+    padding: 20px; /* Вътрешен отстъп около заглавието */
+    text-align: center; /* Центрира текста */
+    border-radius: 5px; /* Закръгля ръбовете на заглавието */
+}
+
+p {
+    font-size: 16px; /* Размер на шрифта за параграфа */
+    line-height: 1.5; /* Височина на реда за по-добра четимост */
+    margin: 20px; /* Отстъп около параграфа */
+    text-align: center; /* Центрира текста на параграфа */
+
+}

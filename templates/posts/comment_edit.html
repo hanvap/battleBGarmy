@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="comment-edit">
+    <form method="post" >
+        {% csrf_token %}
+        {{ form }}
+        <button class="comment-btn" type="submit">Промени</button>
+    </form>
+    </div>
+{% endblock %}

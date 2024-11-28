@@ -1,0 +1,157 @@
+/* Общи стилове */
+body {
+    font-family: 'Roboto', sans-serif; /* Задаваме шрифта Roboto, който е зареден от Google Fonts */
+    margin: 0;                        /* Премахваме отстъпите по подразбиране */
+    padding: 0;
+    line-height: 1.6;/* Премахваме вътрешните отстъпи */
+    background-color: #f4f4f4;        /* Светлосив фон за страницата */
+}
+
+/* Хедър стилове */
+header {
+    background-color: #007bff;        /* Син фон за хедъра */
+    color: white;                     /* Бял цвят на текста */
+    padding: 20px;                    /* Отстъп (padding) в хедъра */
+    text-align: center;                /* Центриране на текста */
+}
+
+header h1 {
+    margin: 0; /* Премахваме отстъпи от заглавието */
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Контейнер стилове */
+.container {
+    width: 90%;                        /* Ширина на контейнера */
+    max-width: 1600px;                /* Максимална ширина */
+    margin: 0 auto;                   /* Центриране */
+    padding: 20px;                    /* Вътрешно отстояние */
+    background-color: #bfbcbc;        /* Бял фон на контейнера */
+    border-radius: 8px;               /* Закръглени ъгли на контейнера */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* По-силна сянка за дълбочина */
+}
+
+/* Съдържание стилове */
+.content {
+    margin-top: 20px;                 /* Отстъп над съдържанието */
+}
+
+/* Футър стилове */
+footer {
+    background-color: #343a40;        /* Тъмен фон за футъра */
+    color: black;                     /* Бял текст */
+    text-align: center;                /* Центриране на текста */
+    padding: 5px 0;                  /* Отстъп (padding) в футъра */
+    position: fixed;                   /* Фиксира футъра на дъното на екрана */
+    width: 100%;                      /* Заема цялата ширина */
+    bottom: 0;                        /* Позиционира го на дъното */
+}
+.base {
+    background-color: blueviolet;
+    max-width: 1600px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Резюме на медийните запитвания (media queries) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;                   /* Широчина на контейнера за малки екрани */
+    }
+}
+
+h2 {
+    color: #007bff;                   /* Основен цветен акцент за заглавието */
+    text-align: center;                /* Центрираме заглавието */
+    margin-top: 20px;                 /* Отстъп отгоре */
+    padding: 10px;                    /* Отстъпи около заглавието */
+}
+
+/* Параграфи */
+.home {
+    max-width: 1200px;                  /* Ограничаваме ширината на текста */
+    margin: 20px auto;                /* Центрираме параграфите */
+    padding: 15px;                     /* Отстъпи около съдържанието */
+    background-color: #fff;            /* Бял фон за четивността */
+    border-radius: 5px;                /* Закръглени ъгли за по-мек вид */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Лека сянка за дълбочина */
+}
+
+/* Общи стилове за страниците в приложението */
+
+
+/* Стил на заглавията, h2 */
+h2 {
+    color: #007bff;                   /* Основен цветен акцент за заглавието */
+    text-align: center;                /* Центрираме заглавието */
+    margin-top: 20px;                 /* Отстъп отгоре */
+    padding: 10px;                    /* Отстъпи около заглавието */
+}
+
+/* Параграфи */
+.base-p {
+    max-width: 1200px;                  /* Ограничаваме ширината на текста */
+    margin: 20px auto;                /* Центрираме параграфите */
+    padding: 5px;                     /* Отстъпи около съдържанието */
+    background-color: #ffffff;         /* Бял фон за четивността */
+    border-radius: 5px;                /* Закръглени ъгли за по-мек вид */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Лека сянка за дълбочина */
+}
+
+/* Добавяне на стилове за контейнер */
+.container {
+    width: 90%;                        /* Ширина на контейнера */
+    max-width: 1600px;                /* Максимална ширина */
+    margin: 0 auto;                   /* Центриране */
+    padding: 20px;                    /* Вътрешно отстояние */
+    background-color: #ffffff;        /* Бял фон на контейнера */
+    border-radius: 8px;               /* Закръглени ъгли на контейнера */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* По-силна сянка за дълбочина */
+}
+
+/* Линкове */
+a {
+    color: #007bff;                  /* Цветова палитра за линковете */
+    text-decoration: none;            /* Премахване на подчертаването */
+}
+
+a:hover {
+    text-decoration: underline;       /* Подчертаване при задържане на мишката */
+}
+
+/* Стил на бутони (ако имате) */
+button {
+    background-color: #007bff;       /* Фон на бутона */
+    color: #ffffff;                   /* Цвят на текста */
+    border: none;                     /* Без граница */
+    padding: 10px 15px;               /* Отстъпи */
+    border-radius: 5px;               /* Закръглени ъгли */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+}
+
+button:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане на бутона */
+}
+
+.battle-comment {
+    display: inline-block;
+  font-size: 16px;
+  background-color: #304ffe;
+  padding: 14px 25px 12px;
+  color: #fff;
+
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.home {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #798da3;
+}
+
+.home h2 {
+    font-weight: bold;
+    font-style: oblique;
+}

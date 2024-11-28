@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block content %}
+    <div class="event-detail">
+    <h1>{{ event.title }}</h1>  
+    <p class="event-description">{{ event.description  }}</p>  
+    <p><strong>Дата: {{ event.date }}</strong></p>  
+    {% if event.image %}  
+        <img src="{{ event.image.url }}" alt="{{ event.title }}" width="300">  
+    {% endif %}  
+    {% if event.video_url %}
+        {% for video in event.videos.all %}
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.yuotube_id}}" frameborder="0" allowfullscreen></iframe> 
+        {% endfor %}
+    {% endif %}  
+    <a href="{% url 'event_list' %}">Обратно към списъка с събития</a>
+    </div>
+{% endblock %}

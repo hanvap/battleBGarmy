@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+<title>Детайли за битка</title> 
+<div class="container-battle">  
+        <h1>{{ object.title }}</h1>  
+        <p class="description"><strong>Описание:</strong> {{ object.description }}</p> 
+        <p>Участващи страни:</p>
+            {% for country in battle.countries_involved.all %}
+            <ul class="country">  
+                   
+                    <li>{{ country.name }}</li>
+            </ul> 
+            {% endfor %} 
+        <p>{{ battle.get_result_display }}</p>
+        <p><strong>Дата:</strong> {{ object.date }}</p>  
+        
+        <!-- Можете да добавите и снимка на битката, ако имате такова поле -->  
+        {% if object.image_url %}  
+            <img src="{{ battle.image_url }}" alt="{{ object.title }}" />  
+        {% endif %}  
+        {%  if user.is_superuser or user.is_staff %}
+        <ul class="battle">
+            <li><a href="{% url 'battle_edit' battle.pk %}">Промени</a></li>
+            <li><a href="{% url 'battle_delete' battle.pk %}">Истрий</a></li>
+        </ul>
+        {% endif %}
+        <h2>Коментари:</h2>  
+        <div class="comments">  
+            {% for comment in comments %}  
+                <div class="comment">  
+                    <p><strong>{{ comment.user.username }}</strong>: {{ comment.content }}</p>  
+                    <p><small>Побликуван на: {{ comment.created_at }}</small></p>
+                {% if comment.user == user %}
+                    <div class="comment-edit-delete">
+                <a href="{% url 'comment_edit' comment.pk %}">Редактирай</a>
+                <a href="{% url 'comment_delete' comment.pk %}">Изтрий</a> 
+                    </div>
+                {% endif %}
+                </div>  
+            {% empty %}  
+                <p>Няма все още коментари.</p>  
+            {% endfor %}  
+        </div>  
+        {% if comments.has_other_pages %}  
+    <div class="pagination">  
+      <span class="step-links">  
+        {% if comments.has_previous %}  
+          <a href="?page=1">&laquo; Първа</a>  
+          <a href="?page={{ comments.previous_page_number }}">Предишна</a>  
+        {% endif %}  
+
+        <span class="current">  
+          Страница {{ comments.number }} от {{ comments.paginator.num_pages }}  
+        </span>  
+
+        {% if comments.has_next %}  
+          <a href="?page={{ comments.next_page_number }}">Следваща</a>  
+          <a href="?page={{ comments.paginator.num_pages }}">Последна &raquo;</a>  
+        {% endif %}  
+      </span>  
+    </div>  
+  {% endif %}  
+    
+  <h2>Оценка: {{ avg_score|floatformat:1 }}</h2>
+    <div class="comment-battle">
+        
+        {% if user.is_authenticated %}
+            <h3>Оставете коментар:</h3> 
+        <form method="post" action="{% url 'battle_detail' battle.pk %}">  
+            {% csrf_token %}  
+            {{ comment_form.as_p }}  
+            <button type="submit">Изпрати коментар</button>
+            
+        </form> 
+        
+    </div>
+            <p>Средна Оценка: {{ avg_score }}</p>
+        <div class="scroll-battle">
+        <h3>Оценете битката:</h3>  
+        <form method="post" {% url 'battle_detail' battle.pk %}>  
+            {% csrf_token %}  
+            {{ rating_form.as_p }}  
+            <button type="submit">Оцени</button>  
+        </form>
+            {% else %}
+        <p>За да оставите коментар и оценка, моля, <a class="battle-comment" href="{% url 'register' %}">регистрирайте се</a> или <a class="battle-comment" href="{% url 'login' %}">влезте</a>.</p>
+        {% endif %}
+        </div>
+    </div>
+
+</body>
+{% endblock %}

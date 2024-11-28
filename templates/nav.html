@@ -1,0 +1,24 @@
+
+<ul class="nav">  
+    <li><a href="{% url 'home' %}">Home</a></li>  
+    <li><a href="{% url 'battle_list' %}">Battles</a></li>  
+    <li><a href="{% url 'statistics' %}">Statistics</a></li>  
+    <li><a href="{% url 'battle_map' %}">Battle Maps</a></li>  
+    <li><a href="{% url 'event_list' %}">Исторически контекст</a></li>  
+    {% if user.is_authenticated %}  
+        <li><a href="{% url 'profile_detail' user.pk %}">Профил</a></li>  
+        
+        <!-- Форма за Logout -->  
+        <li>  
+            <form action="{% url 'logout' %}" method="post" style="display:inline;">  
+                {% csrf_token %}  
+                <button type="submit">Logout</button>  
+            </form>  
+        </li>  
+    {% else %}  
+        <li><a href="{% url 'login' %}">Login</a></li>  
+        <li><a href="{% url 'register' %}">Register</a></li>  
+    {% endif %}  
+    <li><a href="{% url 'post_detail' %}">Отзив</a></li>  
+</ul>
+

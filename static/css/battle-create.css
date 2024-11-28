@@ -1,0 +1,57 @@
+/* battle-create.css */
+
+/* Основен стил за body */
+body {
+    font-family: Arial, sans-serif;  /* Избиране на шрифт за тялото */
+    background-color: #f4f4f4;       /* Светъл фон на страницата */
+    color: #333;                      /* Цветът на текста */
+    margin: 0;                       /* Нулиране на отстъп */
+    padding: 0;                      /* Нулиране на отстъп */
+}
+
+/* Стил за контейнера на формата за битка */
+.battle-create {
+    max-width: 600px;                /* Максимална ширина на контейнера */
+    margin: 50px auto;               /* Центрирано разположение */
+    padding: 30px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border: 1px solid #ccc;          /* Граница на контейнера */
+    border-radius: 5px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Лека сянка на контейнера */
+    text-align: left;                /* Подредба на съдържанието наляво */
+}
+
+/* Стил за заглавията */
+.battle-create h1 {
+    font-size: 1.6em;                /* Размер на заглавието */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+    color: #333;                     /* Цвят на заглавието */
+}
+
+/* Стил на основните входни полета в формата */
+.battle-create form p {
+    margin-bottom: 15px;             /* Отстъп между входните полета */
+}
+
+/* Стил на бутона за запазване */
+.battle-create button {
+    background-color: #007bff;       /* Син фон на бутона */
+    color: #ffffff;                  /* Бял текст на бутона */
+    border: none;                   /* Без граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Потъмняване на бутона при ховър */
+.battle-create button:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане */
+}
+
+/* Стил за съобщения за грешки, ако е необходимо */
+.error-message {
+    color: red;                      /* Червен цвят за съобщения с грешки */
+    margin-top: 10px;               /* Отстъп отгоре */
+    font-size: 0.9em;                /* По-малък размер на шрифта */
+}

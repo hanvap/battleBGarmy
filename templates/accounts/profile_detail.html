@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}  
+    <h1>Профил на {{user.username }}</h1>  
+    
+    <div class="profile-info">  
+        {% if user.profile.profile_picture %}  
+            <img src="{{ profile.profile_picture }}" alt="Profile Picture" class="profile-picture">  
+        {% else %}  
+            <img src="{% static 'images/images.png' %}" alt="Default Profile Picture" class="profile-picture">  
+        {% endif %}  
+        
+        <p><strong>Име:</strong> {{ user.profile.get_full_name }}</p>
+        <p><strong>Дата на раждане:</strong> {{ user.profile.data_of_birth|date:"Y-m-d" }}</p>  
+        <p><strong>Брой коментари:</strong> {{ comment_count }}</p>  
+            <div class="profile-edit-delete">
+                <a href="{% url 'profile_edit' user.pk %}">Редактирай профил</a>
+                <a href="{% url 'profile_delete' user.pk %}">Истрий профил</a>
+            </div>
+    </div>  
+{% endblock %}

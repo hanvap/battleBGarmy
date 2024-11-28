@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Битки</h1>  
+    <form class="battles-s" method="GET">  
+        <input type="text" name="search" placeholder="Търсене..." value="{{ request.GET.search }}">  
+        <button type="submit">Търси</button>  
+    </form>
+        {% if user.is_staff %}
+        <a href="{% url 'battle_create' %}">Добави нова битка</a> 
+        {% endif %}
+        <h2>БИТКИ</h2> 
+            {% for b in battles %}
+            <ul class="battle">
+                <li><a href="{% url 'battle_detail' b.pk %}">{{ b }}</a> </li>
+            </ul>
+                
+                {% empty %}
+                <p>Няма намерени битки.</p>
+            {% endfor %}
+{% endblock %}

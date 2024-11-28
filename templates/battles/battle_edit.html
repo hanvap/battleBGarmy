@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="battle-edit">
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn-battle-edit" type="submit">Промени</button>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,84 @@
+/* event-list.css */
+
+/* Основен стил за тялото на страницата */
+
+
+/* Стил за контейнера на списъка с исторически събития */
+.even-list {
+    max-width: 800px;                /* Максимална ширина на контейнера */
+    margin: 50px auto;               /* Центрирано разположение */
+    padding: 20px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border: 1px solid #ddd;          /* Нежна граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Заглавията в списъка с исторически събития */
+.even-list h1 {
+    color: #546980;                  /* Цвят на заглавието */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+    font-weight: bold;
+}
+
+/* Стил за линка за добавяне на ново събитие */
+.even-list a:first-of-type {
+    display: inline-block;           /* Налично разположение */
+    margin-bottom: 20px;            /* Отстъп отдолу */
+    color: #fff;                     /* Бял текст */
+    background-color: #1a4329;       /* Зелен фон */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    border-radius: 4px;              /* Закръглени ъгли */
+    text-decoration: none;           /* Премахване на долната линия */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Потъмняване на линка при ховър */
+.even-list a:first-of-type:hover {
+    background-color: #218838;       /* Потъмняване при задържане */
+}
+
+/* Стил за списъка със събития */
+.even-list ul {
+    list-style-type: none;           /* Премахване на точки от списъка */
+    padding: 0;                     /* Премахване на падинг */
+}
+
+/* Стил за всеки елемент в списъка */
+.even-list li {
+    margin-bottom: 30px;             /* Отстъп между елементите */
+    padding: 15px;                   /* Вътрешен падинг */
+    border: 1px solid #ddd;          /* Нежна граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    background-color: #f4f4f4;       /* Светъл фон за елемента */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Промяна на фона при ховър върху елементите от списъка */
+.even-list li:hover {
+    background-color: #e9ecef;       /* Потъмняване при задържане */
+}
+
+/* Стил за заглавията в елементите на списъка */
+.even-list h2 {
+    margin: 0;                       /* Премахване на отстъпа */
+    font-weight: bold;
+    background-color: #798da3;
+}
+
+/* Стил на изображението */
+.even-list img {
+    max-width: 100%;                 /* Максимална ширина на изображението */
+    height: auto;                    /* Автоматичен размер на височината */
+    margin-top: 10px;                /* Отстъп отгоре */
+}
+
+/* Стил на видео iframe */
+.even-list iframe {
+    max-width: 100%;                 /* Максимална ширина на видеото */
+    height: auto;                    /* Автоматичен размер на височината */
+    margin-top: 10px;                /* Отстъп отгоре */
+}
+.even-list p{
+    font-weight: bold;
+}

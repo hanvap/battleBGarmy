@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="statistic">
+<h1>Статистика на битки</h1>  
+
+<h2>Брой битки по години</h2>  
+<img src="data:image/png;base64,{{ statistics_image }}" alt="Графика на битките по години">  
+
+
+<div>  
+    {{ map_html|safe }}  
+</div>  
+
+<a href="{% url 'battle_list' %}">Назад към списъка с битки</a> 
+    </div>
+{% endblock %}

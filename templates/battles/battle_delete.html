@@ -1,0 +1,19 @@
+{% load  static %}
+<!DOCTYPE html>  
+<html lang="bg">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Потвърдете изтриването</title>
+     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>  
+<body>
+<div id=" battle-delete">
+    <h1>Сигурни ли сте, че искате да изтриете "{{ battle }}"?</h1>
+        <form method="POST">  
+            {% csrf_token %}  
+            <button type="submit">Да, изтрий</button>  
+        </form>  
+    <a href="{% url 'battle_list' %}">Отказ</a>
+    </div>
+</body>  
+</html>

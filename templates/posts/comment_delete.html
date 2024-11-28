@@ -1,0 +1,15 @@
+{% extends 'base.html' %}  
+
+{% block content %}  
+<h2>Потвърдете изтриването на коментара</h2>  
+<p>Сигурни ли сте, че искате да изтриете този коментар?</p>  
+
+<p><strong>{{ object.content }}</strong></p>  
+
+<form method="post" action="{% url 'comment_delete' object.pk %}">  <!-- Използване на правилния URL -->  
+    {% csrf_token %}  
+    <input type="hidden" name="_method" value="delete">  <!-- Скрито поле за DELETE -->  
+    <button type="submit">Да, изтрий коментара</button>  
+    <a href="{% url 'battle_detail' object.battle.id %}">Отказ</a>  
+</form>  
+{% endblock %}

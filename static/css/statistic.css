@@ -1,0 +1,50 @@
+/* statistic.css */
+
+/* Основен стил за тялото на страницата */
+
+
+/* Стил за основния контейнер с статистиката */
+.statistic {
+    max-width: 800px;                /* Максимална ширина на контейнера */
+    margin: 50px auto;               /* Центрирано разположение */
+    padding: 20px;                   /* Вътрешен падинг */
+    background-color: darkslategray;       /* Фон на контейнера */
+    border: 1px solid #ddd;          /* Нежна граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Стил за заглавията в статистиката */
+.statistic h1 {
+    color: #007bff;                  /* Цвят на заглавията */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+.statistic h2 {
+    color: darkslategray;
+}
+/* Стил на изображението */
+.statistic img {
+    max-width: 100%;                 /* Максимална ширина на изображението */
+    height: auto;                    /* Автоматичен размер на височината */
+    border-radius: 4px;              /* Закръглени ъгли за изображението */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил за връзката за връщане */
+.statistic a {
+    display: inline-block;           /* Налично разположение */
+    margin-top: 20px;                /* Отстъп отгоре */
+    color: #fff;                     /* Бял текст */
+    background-color: #007bff;       /* Син фон */
+    border: none;                    /* Без граница */
+    border-radius: 4px;              /* Закръглени ъгли */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    text-decoration: none;           /* Премахване на долната линия */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Потъмняване на връзката при ховър */
+.statistic a:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане */
+}

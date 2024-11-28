@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="even-list">
+    <h1>Исторически събития</h1> 
+{% if user.is_staff %}
+    <a href="{% url 'event_create' %}">Добави ново събитие</a>
+{% endif %}
+    <ul>  
+        {% for event in events %}  
+            <li>  
+                <h2><a href="{% url 'event_detail' event.pk %}">{{ event.title }}</a></h2> 
+                
+                <p>Дата: {{ event.date }}</p>  
+                {% if event.image %}  
+                    <img src="{{ event.image.url }}" alt="{{ event.title }}" width="200">  
+                {% endif %}  
+                {% if event.video_url %}  
+                    {% for video in event.videos.all %}
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.yuotube_id}}" frameborder="0" allowfullscreen></iframe> 
+                    {% endfor %}>  
+                {% endif %}  
+            </li>  
+        {% endfor %}  
+    </ul>
+   </div>  
+{% endblock %}

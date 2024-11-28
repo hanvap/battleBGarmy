@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-profile-edit">
+        <form class="profile" method="post" >
+            {% csrf_token %}
+            {{ form }}
+            <button class="button-profile-edit" type="submit">Промени</button>
+        </form>
+    </div>
+{% endblock %}

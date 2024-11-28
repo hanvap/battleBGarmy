@@ -1,0 +1,12 @@
+ {% extends 'base.html' %}
+ {% block content %}
+<body>  
+    <h1>Добави историческо събитие</h1>  
+    <form class="event" method="post" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit">Изпрати</button>  
+    </form>  
+    <a href="{% url 'event_list' %}">Виж всички събития</a>  
+</body>  
+{% endblock %}

@@ -14,7 +14,8 @@
     {% csrf_token %}  
     {{ form.as_p }}  
     <button type="submit">Запази</button>  
-</form> 
+</form>
+    <a href="{% url 'country' %}">Добави страна</a>
 </div>
 </body>
 

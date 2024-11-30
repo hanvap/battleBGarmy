@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-9tim^z2fci-@nl4e4h+bc))_ze$*q(dfar59=uf3s5n91yf*&%'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -89,11 +89,11 @@ WSGI_APPLICATION = 'histproject.wsgi.application'
 DATABASES = {
      "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'history_db',
-        "USER": 'postgres',
-        "PASSWORD": 'password',
-        "HOST": '127.0.0.1',
-        "PORT": '5432',
+        "NAME": '',
+        "USER": '',
+        "PASSWORD": '',
+        "HOST": '',
+        "PORT": '',
     }
 }
 
@@ -156,4 +156,4 @@ EMAIL_PORT = '1025'  # Порт за TLS
 #EMAIL_USE_TLS = True  # Използване на TLS
 #EMAIL_HOST_USER = ''  # Имейл адрес на подателя
 #EMAIL_HOST_PASSWORD = ''  # Парола на имейл адреса
-#DEFAULT_FROM_EMAIL = 'bossvap@gmail.com'
+#DEFAULT_FROM_EMAIL = ''

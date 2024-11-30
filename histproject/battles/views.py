@@ -7,8 +7,8 @@ from django.urls import reverse_lazy
 
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 
-from histproject.battles.forms import BattleBaseForm, BattleEditForm
-from histproject.battles.models import Battle
+from histproject.battles.forms import BattleBaseForm, BattleEditForm, CountryForm
+from histproject.battles.models import Battle, Country
 from histproject.posts.forms import CommentForm, RatingForm
 from histproject.posts.models import Rating
 
@@ -114,3 +114,10 @@ class DeleteBattleView(DeleteView):
     model = Battle
     template_name = 'battles/battle_delete.html'
     success_url = reverse_lazy('battle_list')
+
+
+class CreateCountryView(CreateView):
+    model = Country
+    form_class = CountryForm
+    template_name = 'battles/country_create.html'
+    success_url = reverse_lazy('battle_create')

@@ -5,6 +5,7 @@
     margin: 0;                        /* Нулираме margin-а на списъка */
     display: flex;                    /* Използваме flexbox за подреждане на елементите */
     background-color: #007bff;       /* Син фон на навигационния бар */
+    font-weight: bolder
 }
 
 .nav li {
@@ -32,10 +33,11 @@
 .nav form button {
     background-color: transparent;     /* Прозрачен фон за бутона logout */
     border: 1px solid white;           /* Бяла граница на бутона */
-    color: white;                      /* Бял цвят на текста */
+    color: #9a1d1d;                      /* Бял цвят на текста */
     padding: 8px 15px;                /* Отстъпи около текста на бутона */
     cursor: pointer;                   /* Стилен курсор при задържане */
     transition: background-color 0.3s; /* Плавен преход за фона при ховър */
+    font-weight: bold;
 }
 
 /* Стил за ховър на бутона Logout */

@@ -23,14 +23,14 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         exclude = ['user']
 
-    widgets = {
-       'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
-       'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
-       'data_of_birth': forms.DateInput(attrs={'placeholder': 'Y-M-D'}),
-       'profile_picture': forms.URLInput(attrs={'placeholder': 'https://'}),
-       'email': forms.EmailInput(attrs={'placeholder': 'email'})
+        widgets = {
+            'first_name': forms.TextInput(attrs={'placeholder': 'First Name'}),
+            'last_name': forms.TextInput(attrs={'placeholder': 'Last Name'}),
+            'data_of_birth': forms.DateInput(attrs={'placeholder': 'Y-M-D'}),
+            'profile_picture': forms.URLInput(attrs={'placeholder': 'https://'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'email'})
 
-    }
+        }
 
 
 class ProfileDeleteForm(ProfileForm, DisableFieldsMixin):

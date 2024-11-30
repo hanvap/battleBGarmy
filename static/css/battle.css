@@ -5,13 +5,15 @@
 h1 {
     color: #333;                      /* Цвят на основното заглавие */
     text-align: center;               /* Центриране на заглавието */
-    margin: 20px 0;                  /* Отстъпи отгоре и отдолу */
+    margin: 20px 0;          /* Отстъпи отгоре и отдолу */
+    font-weight: bold;
 }
 
 h2 {
     color: #555;                      /* По-сив цвят за подзаглавието */
     margin-top: 30px;                /* Отстъп отгоре на секцията */
-    text-align: center;               /* Центрираме подзаглавието */
+    text-align: center;     /* Центрираме подзаглавието */
+    font-weight: bolder;
 }
 
 .battles-s {
@@ -42,7 +44,7 @@ h2 {
 }
 
 a {
-    color: #007bff;                  /* Цветът на линковете */
+    color: #717881;                  /* Цветът на линковете */
     text-decoration: none;            /* Без подчертаване */
     display: inline-block;            /* Позволява добавяне на отстъпи */
     margin: 20px 0;

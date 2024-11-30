@@ -9,14 +9,13 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-import environ
+import os
 from pathlib import Path
 
 from django.urls import reverse_lazy
 
 
-env = environ.Env()
-environ.Env.read_env()
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -157,4 +156,4 @@ EMAIL_PORT = '1025'  # Порт за TLS
 #EMAIL_USE_TLS = True  # Използване на TLS
 #EMAIL_HOST_USER = ''  # Имейл адрес на подателя
 #EMAIL_HOST_PASSWORD = ''  # Парола на имейл адреса
-#DEFAULT_FROM_EMAIL = ''
+#DEFAULT_FROM_EMAIL = 'bossvap@gmail.com'

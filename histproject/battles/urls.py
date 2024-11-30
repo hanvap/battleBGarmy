@@ -1,10 +1,11 @@
 from django.urls import path, include
 
 from histproject.battles.views import ListBattleView, CreateBattleView, DetailBattleView, UpdateBattleView, \
-    DeleteBattleView
+    DeleteBattleView, CreateCountryView
 
 urlpatterns = [
     path('', ListBattleView.as_view(), name='battle_list'),
+    path('country/', CreateCountryView.as_view(), name='country'),
     path('new/', CreateBattleView.as_view(), name='battle_create'),
     path('<int:pk>/', include([
         path('', DetailBattleView.as_view(), name='battle_detail'),

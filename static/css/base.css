@@ -134,7 +134,7 @@ button:hover {
     background-color: #0056b3;       /* Потъмняване при задържане на бутона */
 }
 
-.battle-comment {
+.battle-comment  {
     display: inline-block;
   font-size: 16px;
   background-color: #304ffe;
@@ -154,4 +154,22 @@ button:hover {
 .home h2 {
     font-weight: bold;
     font-style: oblique;
+}
+.battle-create-a a{
+    display: inline-block;
+  font-size: 16px;
+  background-color: #304ffe;
+  padding: 14px 20px 12px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+}
+.battle-detail li a {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.battle-detail {
+    background-color: #798da3;
+    align-items: center;
 }

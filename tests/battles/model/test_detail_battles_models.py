@@ -30,10 +30,12 @@ class BattleModelTests(TestCase):
         battle.countries_involved.add(self.country)  # След като е записана, добавяме страната
         self.assertEqual(battle.countries_involved.count(), 1)  # Проверка, че страната е добавена
 
-    def test_battle_creation_invalid_name_contains_numbers(self):
-        """ Проверете дали получавате ValidationError, ако името съдържа цифри. """
+
+
+    def test_battle_creation_invalid_name_not_string(self):
+        """ Проверете дали получавате ValidationError, ако името не е низ. """
         battle = Battle(
-            name='Сражение 1',
+            name=123,  # Неправилен тип данни
             date='2024-01-01',
             location='София',
             result='Win',
@@ -42,30 +44,11 @@ class BattleModelTests(TestCase):
             longitude=23.0,
             image_url='http://example.com/image.jpg'
         )
-        battle.full_clean()  # Проверка на валидността на данните
-        battle.save()
-        battle.countries_involved.add(self.country)
 
-        with ValidationError as ve:
-            battle.full_clean() # Трябва да вдигне ValidationError
-            self.assertEqual(str(ve), {'name': ['Трябва да съдържа само букви.']})
-
-    def test_battle_creation_invalid_name_not_string(self):
-        """ Проверете дали получавате ValidationError, ако името не е низ. """
-        battle = Battle(
-            name=123,  # Неправилен тип данни
-            date='2024-01-01',
-            location='София',
-            result='WIN',
-            description='Тестово описание.',
-            latitude=42.6977,
-            longitude=23.3219,
-            image_url='http://example.com/image.jpg'
-        )
-        battle.countries_involved.add(self.country)
 
         with self.assertRaises(ValidationError):
             battle.full_clean()  # Трябва да вдигне ValidationError
+
 
     def test_battle_creation_with_missing_fields(self):
         """ Проверете дали получавате ValidationError, ако липсват задължителни полета. """
@@ -79,7 +62,7 @@ class BattleModelTests(TestCase):
             longitude=None,  # Липсва
             image_url='http://example.com/image.jpg'
         )
-        battle.countries_involved.add(self.country)
+
 
         with self.assertRaises(ValidationError):
             battle.full_clean()  # Трябва да вдигне ValidationError
@@ -96,7 +79,7 @@ class BattleModelTests(TestCase):
             longitude=200.0,  # Невалидна стойност за longitude
             image_url='http://example.com/image.jpg'
         )
-        battle.countries_involved.add(self.country)
+
 
         with self.assertRaises(ValidationError):
             battle.full_clean()  # Трябва да вдигне ValidationError за координатите

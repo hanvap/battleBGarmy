@@ -1,8 +1,11 @@
 from django.contrib.auth import get_user_model
+
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 from histproject.accounts.models import Profile
+from histproject.accounts.tasks import send_welcome_email
 
 userModel = get_user_model()
 
@@ -10,3 +13,4 @@ userModel = get_user_model()
 def create_profile(sender, instance, created, **kwargs):
     if created:
         Profile.objects.create(user=instance)
+        send_welcome_email(instance.email)

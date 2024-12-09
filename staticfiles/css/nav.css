@@ -1,0 +1,46 @@
+/* Общи стилове за навигационното меню */
+.nav {
+    list-style-type: none;             /* Премахваме маркери от списъка */
+    padding: 0;                       /* Нулираме padding-а на списъка */
+    margin: 0;                        /* Нулираме margin-а на списъка */
+    display: flex;                    /* Използваме flexbox за подреждане на елементите */
+    background-color: #007bff;       /* Син фон на навигационния бар */
+    font-weight: bolder
+}
+
+.nav li {
+    margin-right: 20px;               /* Отстъп между елементите на менюто */
+}
+
+.nav li:last-child {
+    margin-right: 0;                  /* Нулираме отстъпа на последния елемент */
+}
+
+.nav a {
+    color: white;                     /* Бял цвят на текста на линковете */
+    text-decoration: none;            /* Премахване на подчертаването на линковете */
+    padding: 10px 15px;              /* Отстъпи около текста */
+    transition: background-color 0.3s; /* Плавен преход за фона при ховър */
+}
+
+/* Стил за ховър на линковете */
+.nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Лек фон при ховър за визуален ефект */
+    border-radius: 5px;               /* Закръглени ъгли при ховър */
+}
+
+/* Стил за бутона Logout */
+.nav form button {
+    background-color: transparent;     /* Прозрачен фон за бутона logout */
+    border: 1px solid white;           /* Бяла граница на бутона */
+    color: #9a1d1d;                      /* Бял цвят на текста */
+    padding: 8px 15px;                /* Отстъпи около текста на бутона */
+    cursor: pointer;                   /* Стилен курсор при задържане */
+    transition: background-color 0.3s; /* Плавен преход за фона при ховър */
+    font-weight: bold;
+}
+
+/* Стил за ховър на бутона Logout */
+.nav form button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Лек фон при ховър за бутона */
+}

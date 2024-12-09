@@ -1,0 +1,223 @@
+/* battle.css */
+
+
+
+h1 {
+    color: #333;                      /* Цвят на основното заглавие */
+    text-align: center;               /* Центриране на заглавието */
+    margin: 20px 0;          /* Отстъпи отгоре и отдолу */
+    font-weight: bold;
+}
+
+h2 {
+    color: #555;                      /* По-сив цвят за подзаглавието */
+    margin-top: 30px;                /* Отстъп отгоре на секцията */
+    text-align: center;     /* Центрираме подзаглавието */
+    font-weight: bolder;
+}
+
+.battles-s {
+    display: flex;                    /* Намираме елементите в ред */
+    justify-content: center;          /* Центрираме формата */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+.battles-s input[type="text"] {
+    padding: 10px;                   /* Отстъпи около текстовото поле */
+    border: 1px solid #ccc;          /* Граница около текстовото поле */
+    border-radius: 5px;              /* Закръглени ъгли */
+    width: 300px;                    /* Ширина на текстовото поле */
+}
+
+.battles-s button {
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    background-color: #007bff;       /* Цветът на бутона */
+    color: #ffffff;                   /* Цвят на текста на бутона */
+    border: none;                     /* Без граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+    margin-left: 10px;                /* Отстъп отляво на бутона */
+}
+
+.battles-s button:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане на бутона */
+}
+
+a {
+    color: #717881;                  /* Цветът на линковете */
+    text-decoration: none;            /* Без подчертаване */
+    display: inline-block;            /* Позволява добавяне на отстъпи */
+    margin: 20px 0;
+
+}
+
+a:hover {
+    text-decoration: underline;       /* Подчертаване при задържане на мишката */
+}
+
+.battle {
+    list-style-type: none;            /* Премахване на стандартните маркери */
+    padding: 0;                      /* Нулиране на падинг */
+}
+
+.battle li {
+    background-color: #ffffff;        /* Бял фон за всяка битка */
+    border: 1px solid #ccc;           /* Граница около всеки елемент */
+    margin: 5px 0;                   /* Разстояние между елементите */
+    padding: 10px;                   /* Вътрешен падинг */
+    border-radius: 5px;              /* Закръглени ъгли за всяка битка */
+    transition: background-color 0.3s; /* Плавно преминаване при ховър */
+}
+
+.battle li:hover {
+    background-color: #f1f1f1;       /* При ховър, фонът се променя */
+}
+
+/* battle.css */
+
+/* Основни стилове за контейнера на битката */
+.container-battle {
+    max-width: 1200px;                /* Максимална ширина на контейнера */
+    margin: 20px auto;               /* Центриране на контейнера */
+    padding: 20px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border: 1px solid #ccc;          /* Граница около контейнера */
+    border-radius: 8px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Заглавия на битката */
+h1 {
+    color: #333;                     /* Цвят на заглавието */
+    text-align: center;              /* Центрирано заглавие */
+    margin-bottom: 15px;             /* Отстъп отдолу */
+}
+
+/* Описание на битката */
+.description {
+    font-size: 1.1em;                /* По-голям шрифт за описанието */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+    text-align: justify;
+    text-indent: 10mm;
+}
+
+/* Стилове за списъка с участващи страни */
+.country {
+    list-style-type: none;           /* Премахване на стандартните маркери */
+    padding: 0;                      /* Нулиране на падинг */
+}
+
+.country li {
+    padding: 5px 0;                  /* Падинг около имената на страните */
+    border-bottom: 1px solid #eee;   /* Лека граница между страните */
+}
+
+/* Стил за изображения */
+img {
+    max-width: 100%;                 /* Ограничаване на ширината на изображението */
+    height: auto;                    /* Автоматично запазване на пропорциите */
+    margin: 20px 0;                 /* Отстъп отгоре и отдолу */
+}
+
+/* Стилове за коментарите */
+.comments {
+    margin-top: 20px;                /* Отстъп отгоре */
+}
+
+.comment {
+    background-color: #f9f9f9;       /* Светъл фон за коментарите */
+    border: 1px solid #ddd;          /* Граница около коментарите */
+    border-radius: 5px;              /* Закръглени ъгли */
+    padding: 10px;                   /* Вътрешен падинг */
+    margin-bottom: 10px;             /* Отстъп между коментарите */
+}
+
+/* Стил за линковете за редактиране и изтриване */
+.battle {
+    list-style-type: none;            /* Премахване на стандартните маркери */
+    padding: 0;                      /* Нулиране на падинг */
+}
+
+.battle li {
+    display: inline;                  /* Подреждане на линковете в ред */
+    margin-right: 15px;              /* Отстъп между линковете */
+}
+
+.battle a {
+    color: #007bff;                  /* Цветът на линковете */
+    text-decoration: none;            /* Без подчертаване */
+}
+
+.battle a:hover {
+    text-decoration: underline;       /* Подчертаване при ховър */
+}
+
+/* Стил за формите */
+form {
+    margin-top: 20px;                /* Отстъп отгоре на формите */
+    background-color: #f8f8f8;       /* Светъл фон за формите */
+    padding: 15px;                   /* Вътрешен падинг */
+    border-radius: 5px;              /* Закръглени ъгли */
+    border: 1px solid #ddd;          /* Лека граница */
+}
+
+/* Стил на бутоните */
+.scroll-battle button {
+    background-color: #007bff;       /* Цветът на бутона */
+    color: #ffffff;                   /* Цвят на текста на бутона */
+    border: none;                     /* Без граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+}
+
+button:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане */
+}
+
+/* Стил за страниците на коментарите */
+.pagination {
+    margin-top: 20px;                /* Отстъп отгоре */
+    text-align: center;               /* Центрирано съдържание */
+}
+
+.pagination a {
+    margin: 0 5px;                   /* Отстъп между линковете за страници */
+    color: #007bff;                  /* Цветът на линковете */
+    text-decoration: none;            /* Без подчертаване */
+}
+
+.pagination a:hover {
+    text-decoration: underline;       /* Подчертаване при ховър */
+}
+
+.current {
+    font-weight: bold;                /* Удебелен текст за текущата страница */
+}
+
+.comment-edit-delete a {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #007bff;
+    padding: 14px 25px 12px;
+    color: #fff;
+    border-radius: 5px;/* Отстъпи около линковете */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.comment-edit-delete a:hover {
+    background-color: #1da1f2;
+}
+.profile-edit-delete a {
+    display: inline-block;
+    font-size: 16px;
+    background-color: #798da3;
+    padding: 14px 25px 12px;
+    color: #fff;
+    border-radius: 5px;/* Отстъпи около линковете */
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+.profile-edit-delete a:hover {
+    background-color: #424f59
+}

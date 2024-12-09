@@ -1,0 +1,72 @@
+/* share-project.css */
+
+/* Основен стил за тялото на страницата */
+.body {
+    font-family: Arial, sans-serif;  /* Избор на шрифт */
+    background-color: #f4f7fa;       /* Светъл фон на страницата */
+    color: #333;                     /* Цвет на текста */
+    margin: 0;                       /* Премахване на отстъпите */
+    padding: 0;                      /* Премахване на отстъпа */
+}
+
+/* Контейнер за споделяне */
+.share-container {
+    max-width: 600px;                /* Максимална ширина на контейнера */
+    margin: 50px auto;               /* Центрирано разположение */
+    padding: 30px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border-radius: 8px;              /* Закръглени ъгли */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лека сянка */
+    text-align: center;              /* Центриране на текста */
+}
+
+/* Заглавие на сайта на споделяне */
+.share-container h1 {
+    color: #007bff;                  /* Цвет на заглавието */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил за параграфа */
+.share-container p {
+    font-size: 16px;                 /* Размер на шрифта на описанието */
+    line-height: 1.5;                /* Междуредово разстояние */
+    margin-bottom: 30px;             /* Отстъп отдолу */
+}
+
+/* Общи стилове за бутоните за споделяне */
+.social-buttons {
+    display: flex;                   /* Гъвкаво разположение */
+    justify-content: center;         /* Центрирано подреждане */
+    gap: 15px;                       /* Разстояние между бутоните */
+}
+
+/* Стил за бутона за споделяне */
+.share-button {
+    display: inline-block;           /* Налично разположение */
+    padding: 12px 20px;              /* Вътрешни отстъпи */
+    border-radius: 5px;              /* Закръглени ъгли */
+    text-decoration: none;           /* Премахване на долната линия */
+    color: #fff;                     /* Цвет на текста */
+    font-size: 16px;                 /* Размер на шрифта */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Стил за Facebook бутон */
+.share-button.facebook {
+    background-color: #3b5998;      /* Facebook син цвят */
+}
+
+/* Стил за Twitter бутон */
+.share-button.twitter {
+    background-color: #1da1f2;      /* Twitter син цвят */
+}
+
+/* Стил за LinkedIn бутон */
+.share-button.linkedin {
+    background-color: #0077b5;      /* LinkedIn син цвят */
+}
+
+/* Потъмняване на бутона при ховър */
+.share-button:hover {
+    opacity: 0.8;                    /* Лекo потъмняване при задържане */
+}

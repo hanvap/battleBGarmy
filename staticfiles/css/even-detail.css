@@ -1,0 +1,78 @@
+/* event-detail.css */
+
+/* Основен стил за тялото на страницата */
+/*body {
+    font-family: Arial, sans-serif;  /* Избор на шрифт */
+    /*background-color: #f7f9fc;       /* Светъл фон на страницата */
+    /*color: #333;                     /* Цвет на текста */
+    /*margin: 0;                       /* Премахване на отстъпите */
+    /*padding: 0;                      /* Премахване на отстъпа */
+/*}*/
+
+/* Стил за контейнера на детайлите на събитието */
+.event-detail {
+    max-width: 1200px;                /* Максимална ширина на контейнера */
+    margin: 50px auto;               /* Центрирано разположение */
+    padding: 20px;                   /* Вътрешен падинг */
+    background-color: #e5eaf6;       /* Фон на контейнера */
+    border: 1px solid #ccc;          /* Нежна граница */
+    border-radius: 8px;              /* Закръглени ъгли */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Лека сянка */
+    align-items: center;
+}
+
+/* Заглавие на събитието */
+.event-detail h1 {
+    color: #007bff;                  /* Цвет на заглавието */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+    font-weight:bold;
+}
+
+/* Стил за описанието на събитието */
+.event-detail .event-description {
+    font-size: 16px;                 /* Размер на шрифта на описанието */
+    line-height: 1.5;                /* Междуредово разстояние */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил за дата на събитието */
+.event-detail strong {
+    color: #333;                     /* Цвет на текста */
+}
+
+/* Стил на изображението */
+.event-detail img {
+    max-width: 100%;                 /* Максимална ширина на изображението */
+    height: auto;                    /* Автоматичен размер на височината */
+    margin-top: 10px;                /* Отстъп отгоре */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил на видео iframe */
+.event-detail iframe {
+    max-width: 100%;                 /* Максимална ширина на видеото */
+    height: auto;                    /* Автоматичен размер на височината */
+    margin-top: 10px;                /* Отстъп отгоре */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил за линка за връщане към списъка */
+.event-detail a {
+    display: inline-block;           /* Налично разположение */
+    margin-top: 20px;               /* Отстъп отгоре */
+    color: #fff;                    /* Бял текст */
+    background-color: #007bff;      /* Син фон */
+    padding: 10px 15px;              /* Вътрешни отстъпи */
+    border-radius: 4px;              /* Закръглени ъгли */
+    text-decoration: none;           /* Премахване на долната линия */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+/* Потъмняване на линка при ховър */
+.event-detail a:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане */
+}
+.event-detail p {
+    text-align: justify;
+    text-indent: 20px;
+}

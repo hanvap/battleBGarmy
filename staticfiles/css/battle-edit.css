@@ -1,0 +1,62 @@
+/* battle-edit.css */
+
+/* Основен стил за контейнера на формата */
+.battle-edit {
+    max-width: 600px;                /* Максимална ширина на контейнера */
+    margin: 20px auto;               /* Центриране на контейнера */
+    padding: 30px;                   /* Вътрешен падинг */
+    background-color: #ffffff;       /* Фон на контейнера */
+    border: 1px solid #ccc;          /* Граница около контейнера */
+    border-radius: 8px;              /* Закръглени ъгли */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Лека сянка */
+}
+
+/* Стил за заглавията на формата */
+.battle-edit h2 {
+    color: #333;                     /* Цвят на заглавията */
+    font-size: 1.5em;                /* Размер на шрифта */
+    text-align: center;              /* Центрирано заглавие */
+    margin-bottom: 20px;             /* Отстъп отдолу */
+}
+
+/* Стил за формите */
+.battle-edit form {
+    margin: 0;                      /* Нулиране на отстъп */
+}
+
+/* Стил на полетата на формата */
+.battle-edit input[type="text"],
+.battle-edit input[type="email"],
+.battle-edit input[type="password"],
+.battle-edit select,
+.battle-edit textarea {
+    width: 100%;                     /* Пълна ширина на полетата */
+    padding: 10px;                  /* Вътрешен падинг */
+    margin: 8px 0;                  /* Отстъп между полетата */
+    border: 1px solid #ccc;          /* Граница на полето */
+    border-radius: 4px;              /* Закръглени ъгли */
+    box-sizing: border-box;           /* Включване на падинг в размерите */
+}
+
+/* Стил на бутона за променяне */
+.btn-battle-edit {
+    background-color: #007bff;       /* Цветът на бутона */
+    color: #ffffff;                   /* Цвят на текста */
+    border: none;                     /* Без граница */
+    border-radius: 5px;              /* Закръглени ъгли */
+    padding: 10px 20px;              /* Вътрешни отстъпи */
+    cursor: pointer;                  /* Стил на курсора при задържане */
+    font-size: 1.1em;                  /* Размер на шрифта на бутона */
+    transition: background-color 0.3s; /* Плавен преход на цвета */
+}
+
+.btn-battle-edit:hover {
+    background-color: #0056b3;       /* Потъмняване при задържане */
+}
+
+/* Стил на съобщенията за грешки, ако е необходимо */
+.error-message {
+    color: red;                      /* Червен цвят за съобщения с грешки */
+    margin-top: 10px;               /* Отстъп отгоре */
+    font-size: 0.9em;                /* По-малък размер на шрифта */
+}

@@ -32,6 +32,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', config('SECRET_KEY', None))
 DEBUG = os.getenv('DEBUG', config('DEBUG')) == "True"
 
 ALLOWED_HOSTS = ['battlebg-fgg9cxh5e3fbb3fj.italynorth-01.azurewebsites.net', 'localhost']
+CSRF_TRUSTED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', config('CSRF_TRUSTED_ORIGINS', [])).split(',')
 
 
 # Application definition

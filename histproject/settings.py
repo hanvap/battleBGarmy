@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', config('SECRET_KEY', None))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', config('DEBUG')) == "True"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['battlebg-fgg9cxh5e3fbb3fj.italynorth-01.azurewebsites.net', 'localhost']
 
 
 # Application definition

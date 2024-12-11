@@ -82,6 +82,11 @@ class DetailBattleView(DetailView):
     def handle_rating(self, request):
         rating_form = RatingForm(request.POST)
         if rating_form.is_valid():
+            existing_rating = Rating.objects.filter(battle=self.object, user=request.user).first()
+
+            if existing_rating:
+                messages.error(request, 'Вече сте оценили тази битка.')
+                return redirect('battle_detail', pk=self.object.pk)
             rating = rating_form.save(commit=False)
             rating.battle = self.object
             rating.user = request.user
